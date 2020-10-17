@@ -1,0 +1,127 @@
+{
+    "item": [
+        {
+            "id": "2f845681-d22a-4e97-a05e-bc1fc4be4de6",
+            "item": [
+                {
+                    "id": "8d0b1281-d9b4-49fd-bd3b-d82a7b39a1f0",
+                    "name": "setMessage",
+                    "request": {
+                        "url": {
+                            "host": [
+                                "{{url}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "POST",
+                        "body": {
+                            "mode": "graphql",
+                            "graphql": {
+                                "query": "mutation setMessage ($message: String) {\n    setMessage (message: $message)\n}",
+                                "variables": "{\n  \"message\": \"\"\n}"
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": []
+                }
+            ],
+            "event": [],
+            "name": "mutations"
+        },
+        {
+            "id": "085a2826-0329-4568-8a7d-dc0c6c237ab9",
+            "item": [
+                {
+                    "id": "15e4b686-deb9-47c4-937f-eb62733e449b",
+                    "name": "hello",
+                    "request": {
+                        "url": {
+                            "host": [
+                                "{{url}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "POST",
+                        "body": {
+                            "mode": "graphql",
+                            "graphql": {
+                                "query": "query hello {\n    hello\n}",
+                                "variables": "{}"
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": []
+                },
+                {
+                    "id": "7e33f1e1-d1bb-4165-82ad-280c6e7770b1",
+                    "name": "rollDice",
+                    "request": {
+                        "url": {
+                            "host": [
+                                "{{url}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "POST",
+                        "body": {
+                            "mode": "graphql",
+                            "graphql": {
+                                "query": "query rollDice ($numDice: Int!, $numSides: Int) {\n    rollDice (numDice: $numDice, numSides: $numSides)\n}",
+                                "variables": "{\n  \"numDice\": 0,\n  \"numSides\": 0\n}"
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": []
+                },
+                {
+                    "id": "f2235df8-fbda-4726-b305-e6d756ca9742",
+                    "name": "getMessage",
+                    "request": {
+                        "url": {
+                            "host": [
+                                "{{url}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "POST",
+                        "body": {
+                            "mode": "graphql",
+                            "graphql": {
+                                "query": "query getMessage {\n    getMessage\n}",
+                                "variables": "{}"
+                            }
+                        }
+                    },
+                    "response": [],
+                    "event": []
+                }
+            ],
+            "event": [],
+            "name": "queries"
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "id": "url",
+            "description": {
+                "content": "URL for the request.",
+                "type": "text/plain"
+            },
+            "type": "any",
+            "value": ""
+        }
+    ],
+    "info": {
+        "_postman_id": "4f7b5344-b225-4b4b-97fe-eb548759b974",
+        "name": "Postman Collection (from GraphQL)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+}
